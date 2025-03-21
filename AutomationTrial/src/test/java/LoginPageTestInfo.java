@@ -6,11 +6,13 @@ public class LoginPageTestInfo extends BaseTest {
 
     MyInfoPage infoo;
     LoginPage loginpage;
+    @BeforeMethod
     public void init(){
         loginpage = new LoginPage(driver);
         infoo = new MyInfoPage(driver);
 
     }
+    @Test
     public void testSuccessLogin() throws InterruptedException {
         Thread.sleep(7000);
         loginpage.fillUserName("Admin");
